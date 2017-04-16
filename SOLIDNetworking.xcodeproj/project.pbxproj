@@ -11,6 +11,10 @@
 		99BA39901EA3576300818C1D /* SOLIDNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA398F1EA3576300818C1D /* SOLIDNetworkingTests.swift */; };
 		99BA39921EA3576300818C1D /* SOLIDNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BA39841EA3576300818C1D /* SOLIDNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99BA39A51EA360FB00818C1D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BA39A41EA360FB00818C1D /* Alamofire.framework */; };
+		99BA39A71EA3636D00818C1D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA39A61EA3636D00818C1D /* Engine.swift */; };
+		99BA39A91EA3638300818C1D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA39A81EA3638300818C1D /* Request.swift */; };
+		99BA39AB1EA3639000818C1D /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA39AA1EA3639000818C1D /* Interpreter.swift */; };
+		99BA39AF1EA3643E00818C1D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA39AE1EA3643E00818C1D /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,10 @@
 		99BA398F1EA3576300818C1D /* SOLIDNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLIDNetworkingTests.swift; sourceTree = "<group>"; };
 		99BA39911EA3576300818C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99BA39A41EA360FB00818C1D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		99BA39A61EA3636D00818C1D /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		99BA39A81EA3638300818C1D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		99BA39AA1EA3639000818C1D /* Interpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
+		99BA39AE1EA3643E00818C1D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 			children = (
 				99BA39841EA3576300818C1D /* SOLIDNetworking.h */,
 				99BA39851EA3576300818C1D /* Info.plist */,
+				99BA39A61EA3636D00818C1D /* Engine.swift */,
+				99BA39A81EA3638300818C1D /* Request.swift */,
+				99BA39AA1EA3639000818C1D /* Interpreter.swift */,
+				99BA39AE1EA3643E00818C1D /* Result.swift */,
 			);
 			path = SOLIDNetworking;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 					99BA39801EA3576300818C1D = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 9N8WSR7KDY;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					99BA39891EA3576300818C1D = {
@@ -210,6 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BA39AB1EA3639000818C1D /* Interpreter.swift in Sources */,
+				99BA39AF1EA3643E00818C1D /* Result.swift in Sources */,
+				99BA39A71EA3636D00818C1D /* Engine.swift in Sources */,
+				99BA39A91EA3638300818C1D /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +353,7 @@
 		99BA39961EA3576300818C1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9N8WSR7KDY;
@@ -353,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ZG.SOLIDNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,6 +380,7 @@
 		99BA39971EA3576300818C1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9N8WSR7KDY;
@@ -386,6 +406,7 @@
 		99BA39991EA3576300818C1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9N8WSR7KDY;
 				INFOPLIST_FILE = SOLIDNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -398,6 +419,7 @@
 		99BA399A1EA3576300818C1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9N8WSR7KDY;
 				INFOPLIST_FILE = SOLIDNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
