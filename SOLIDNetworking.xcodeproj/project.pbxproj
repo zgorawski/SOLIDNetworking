@@ -10,6 +10,7 @@
 		99BA398B1EA3576300818C1D /* SOLIDNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BA39811EA3576300818C1D /* SOLIDNetworking.framework */; };
 		99BA39901EA3576300818C1D /* SOLIDNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA398F1EA3576300818C1D /* SOLIDNetworkingTests.swift */; };
 		99BA39921EA3576300818C1D /* SOLIDNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BA39841EA3576300818C1D /* SOLIDNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99BA39A51EA360FB00818C1D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BA39A41EA360FB00818C1D /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		99BA398A1EA3576300818C1D /* SOLIDNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOLIDNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BA398F1EA3576300818C1D /* SOLIDNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLIDNetworkingTests.swift; sourceTree = "<group>"; };
 		99BA39911EA3576300818C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99BA39A41EA360FB00818C1D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BA39A51EA360FB00818C1D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 				99BA39831EA3576300818C1D /* SOLIDNetworking */,
 				99BA398E1EA3576300818C1D /* SOLIDNetworkingTests */,
 				99BA39821EA3576300818C1D /* Products */,
+				99BA39A31EA360FB00818C1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +88,14 @@
 				99BA39911EA3576300818C1D /* Info.plist */,
 			);
 			path = SOLIDNetworkingTests;
+			sourceTree = "<group>";
+		};
+		99BA39A31EA360FB00818C1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99BA39A41EA360FB00818C1D /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,13 +342,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SOLIDNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZG.SOLIDNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -349,13 +367,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SOLIDNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZG.SOLIDNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -402,6 +426,7 @@
 				99BA39971EA3576300818C1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99BA39981EA3576300818C1D /* Build configuration list for PBXNativeTarget "SOLIDNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +435,7 @@
 				99BA399A1EA3576300818C1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
